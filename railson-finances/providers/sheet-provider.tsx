@@ -1,14 +1,14 @@
 "use client";
 
-import { EditAccountSheet } from "@/app/features/accounts/components/edit-account-sheet";
-// import { useMountedState } from "react-use";
-
-import { NewAccountSheet } from "@/app/features/accounts/components/new-account-sheet";
 import { useEffect, useState } from "react";
 
-export const SheetProvider = () => {
-  //   const isMounted = useMountedState();
+import { EditAccountSheet } from "@/app/features/accounts/components/edit-account-sheet";
+import { NewAccountSheet } from "@/app/features/accounts/components/new-account-sheet";
 
+import { NewCategorySheet } from "@/app/features/categories/components/new-category-sheet";
+import { EditCategorySheet } from "@/app/features/categories/components/edit-category-sheet";
+
+export const SheetProvider = () => {
   const [isMounted, setIsMounted] = useState(false);
 
   useEffect(() => {
@@ -21,6 +21,9 @@ export const SheetProvider = () => {
     <>
       <NewAccountSheet />
       <EditAccountSheet />
+
+      <NewCategorySheet />
+      <EditCategorySheet />
     </>
   );
 };
