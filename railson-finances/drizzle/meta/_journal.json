@@ -15,6 +15,13 @@
       "when": 1715612316650,
       "tag": "0001_fluffy_patriot",
       "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "5",
+      "when": 1716816857861,
+      "tag": "0002_chilly_microchip",
+      "breakpoints": true
     }
   ]
 }
