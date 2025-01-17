@@ -1,23 +1,23 @@
-## Função `addBinary`
+## `addBinary` Function
 
-### Descrição
+### Description
 
-A função `addBinary` soma dois números binários representados como strings e retorna o resultado na forma de uma string binária.
+The `addBinary` function adds two binary numbers represented as strings and returns the result as a binary string.
 
-### Parâmetros
+### Parameters
 
-- `a`: String que representa um número binário (ex.: `"101"`).
-- `b`: String que representa um número binário (ex.: `"11"`).
+- `a`: A string representing a binary number (e.g., `"101"`).
+- `b`: A string representing a binary number (e.g., `"11"`).
 
-### Funcionamento
+### How It Works
 
-A função utiliza os conceitos de soma binária, com controle de "vai um" (`carry`) para somar os bits correspondentes de duas strings binárias. A soma é realizada da direita para a esquerda, acumulando o resultado final em uma string.
+The function uses the concept of binary addition, including a "carry" to account for overflow when adding the corresponding bits of two binary strings. The addition is performed from right to left, accumulating the final result in a string.
 
-### Exemplo de Uso
+### Example Usage
 
 ```javascript
 const a = "1010";
 const b = "1011";
 
-console.log(addBinary(a, b)); // Saída: "10101"
+console.log(addBinary(a, b)); // Output: "10101"
 ```
