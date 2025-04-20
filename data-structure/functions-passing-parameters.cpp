@@ -25,18 +25,40 @@ using namespace std;
 
 //Call by address parameters!
 //Parameters is type of Pointers.
-void swap(int *a, int *b){
+// void swap(int *a, int *b){
+//     int temp;
+//     temp = *a;
+//     *a = *b;
+//     *b = temp;
+// }
+
+// int main(){
+//     int num1 = 10, num2 = 15;
+
+//     //Passing the address of parameters
+//     swap(&num1, &num2);
+
+//     cout << num1 << endl;
+//     cout << num2 << endl;
+
+//     return 0;
+// }
+
+
+//Call by reference parameters (C++ only).
+//Parameters now actually means (num1, num2) isn't a pointers.  
+void swap(int &a, int &b){
     int temp;
-    temp = *a;
-    *a = *b;
-    *b = temp;
+    temp = a;
+    a = b;
+    b = temp;
 }
 
 int main(){
     int num1 = 10, num2 = 15;
 
-    //Passing the address of parameters
-    swap(&num1, &num2);
+    //This swap function may become inline function depends on the compiler!
+    swap(num1, num2);
 
     cout << num1 << endl;
     cout << num2 << endl;
