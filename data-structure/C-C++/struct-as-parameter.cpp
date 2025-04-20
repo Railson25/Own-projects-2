@@ -27,18 +27,39 @@ struct rectangle
 // }
 
 
-void fun(struct rectangle *p){
-    p -> length = 45;
-    cout << p -> length << endl;
-    cout << p -> breadth << endl;
+// void fun(struct rectangle *p){
+//     p -> length = 45;
+//     cout << p -> length << endl;
+//     cout << p -> breadth << endl;
+// }
+
+// // Passing struct parameter as a address 
+// int main(){
+
+//     struct rectangle r= {10, 5};
+//     fun(&r);
+//     printf("%d\n", r.length, r.breadth);
+
+//     return 0;
+// }
+
+struct rectangle *fun(){
+    struct rectangle *p;
+    // Creating a struct in a heap memory
+    p = new rectangle;
+
+    p -> length = 15;
+    p -> breadth = 48;
+
+    // returning the pointer
+    return p;
 }
 
-// Passing struct parameter as a address 
 int main(){
+    struct rectangle *ptr = fun();
 
-    struct rectangle r= {10, 5};
-    fun(&r);
-    printf("%d\n", r.length, r.breadth);
+    cout << ptr -> length << endl;
+    cout << ptr -> breadth << endl;
 
     return 0;
 }
