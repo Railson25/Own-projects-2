@@ -6,8 +6,7 @@ using namespace std;
 //Arrays are always passed by address.
 void fun(int *a, int n){
 
-    for(int i = 0; i < n; i++)
-    cout << a[i] << endl;
+    a[0] = 28;
 }
 
 int main(){
@@ -16,7 +15,7 @@ int main(){
 
     fun(a, n);
     for(int x:a)
-    cout << x;
+    cout << x << endl;
 
     return 0;
 }
