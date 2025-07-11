@@ -29,7 +29,7 @@ double Ie(int x, int n){
     double s = 1;
     int i;
     double num = 1, den = 1;
-
+ 
     for(i = 1; i <= n; i ++){
         num *= x;
         den *= i;
